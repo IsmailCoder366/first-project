@@ -1,4 +1,5 @@
 const http = require('http');
+const age = 25
 http.createServer((req, resp)=>{
     resp.setHeader('Content-Type', 'text/html');
     resp.write(`
@@ -8,7 +9,9 @@ http.createServer((req, resp)=>{
             </head>
             <body>
                 <h1>My First Page</h1>
-                <p>Hello, World!</p>
+                <p>`+age+`</p>
+                <h2>`+ Date()+`</h2>
+
             </body>
         </html>
         `);
